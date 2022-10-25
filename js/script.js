@@ -1,10 +1,11 @@
 const container = document.querySelector(".container");
 
 const cardRow = document.createElement("div");
-cardRow.classList.add("row","h-100","align.content-start");
+cardRow.classList.add("row","align.content-start");
 
 container.append(cardRow);
 
+// -----------------**Milestone 0**----------------------------------------
 const staff =[
     {
         name: "Wayne Barnett",
@@ -38,12 +39,36 @@ const staff =[
     }
 ];
 
+
+
+// -----------------**Milestone 1**----------------------------------------
 for (const member of staff) {
     let st = "";
     st += 
-`<-------------------------------------------------->
-nome: ${member.name}
-ruolo: ${member.role}
-image src = ${member.image}`;
+`\n<-------------------------------------------------->\n
+nome: ${member.name}\n
+ruolo: ${member.role}\n
+image src = ${member.image}\n`;
     console.log(st);
 }
+
+
+// -----------------**Milestone 2**----------------------------------------
+function printInfo(){
+    let st = "";
+    const infoRow = document.createElement("div");
+    infoRow.classList.add("row","align.content-start");
+    container.append(infoRow);
+
+    for (const member of staff) {
+        st += 
+    `<--------------------------------------------------> <br>
+    nome: ${member.name}<br>
+    ruolo: ${member.role}<br>
+    image src = ${member.image}<br>`;
+    }
+
+    infoRow.innerHTML = `<div class="col"> <p> ${st}</p> </div>`
+}
+
+printInfo();
