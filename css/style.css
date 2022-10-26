@@ -1,0 +1,22 @@
+
+
+.card-img-top span{
+    left: -50%;
+    transition: left 1s;
+}
+
+
+
+div.card-img-top:hover span:first-child{
+    left: 10%;
+}
+
+
+div.card-img-top:hover span{
+    left: 15%;
+}
+
+
+div.card-img-top:hover span:last-child{
+    left: 20%;
+}
